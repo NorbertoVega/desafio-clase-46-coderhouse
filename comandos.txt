@@ -1,0 +1,19 @@
+npm install -g @nestjs/cli
+
+nest new my-nest-project
+
+npm run start:dev
+
+nest generate module producto
+nest generate controller producto
+nest generate service producto
+nest generate interface interfaces/producto
+mkdir src/dto && touch src/dto/producto.dto.ts
+
+nest generate module carrito
+nest generate controller carrito
+nest generate service carrito
+nest generate interface interfaces/carrito
+touch src/dto/carrito.dto.ts
+
+npm install @nestjs/swagger swagger-ui-express
