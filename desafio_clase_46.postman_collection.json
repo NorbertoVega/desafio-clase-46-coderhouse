@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "0f1ec8eb-af87-444f-b440-db8f6a4e466d",
+		"name": "desafio-clase-46-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15810475"
+	},
+	"item": [
+		{
+			"name": "producto",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"123151648\",\r\n    \"descripcion\": \"descripcion prod 123151648\",\r\n    \"nombre\": \"Mouse Logitech G Series\",\r\n    \"precio\": 3860,\r\n    \"stock\": 25,\r\n    \"timestamp\":0,\r\n    \"url\": \"https://http2.mlstatic.com/D_NQ_NP_2X_958411-MLA32145845961_092019-F.webp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/producto/62f33d77b98d85277081fb9a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto",
+								"62f33d77b98d85277081fb9a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"123151652\",\r\n    \"descripcion\": \"descripcion prod 123151652\",\r\n    \"nombre\": \"Monitor gamer LG 27GL650F\",\r\n    \"precio\": 3860,\r\n    \"stock\": 25,\r\n    \"timestamp\":0,\r\n    \"url\": \"https://http2.mlstatic.com/D_NQ_NP_2X_624926-MLA44490109901_012021-F.webp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/producto/62f59276e525fa7ad3d2dfee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto",
+								"62f59276e525fa7ad3d2dfee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/producto/62f33d77b98d85277081fb9a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"producto",
+								"62f33d77b98d85277081fb9a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carrito",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carrito/62f592d3e525fa7ad3d2dff5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carrito",
+								"62f592d3e525fa7ad3d2dff5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carrito/62f593c2e41f490aeae443ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carrito",
+								"62f593c2e41f490aeae443ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product to cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carrito/62f592d3e525fa7ad3d2dff5/productos/62f444421e0c44232ef8d52b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carrito",
+								"62f592d3e525fa7ad3d2dff5",
+								"productos",
+								"62f444421e0c44232ef8d52b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product from cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/carrito/62f582125a9eecfa1c0b9b37/productos/62f444251e0c44232ef8d526",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carrito",
+								"62f582125a9eecfa1c0b9b37",
+								"productos",
+								"62f444251e0c44232ef8d526"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
